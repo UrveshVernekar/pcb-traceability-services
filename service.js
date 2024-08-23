@@ -46,6 +46,7 @@ schedule.scheduleJob('*/15 * * * *', function () {
 /**
  * @author Urvesh Vernekar
  * @date 2024-04-24
+ * @update
  * @use To migrate ICT files
  */
 schedule.scheduleJob("35 16 15 * * *", function () {
