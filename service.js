@@ -38,7 +38,7 @@ const everICTDataProcess = async () => {
  * @use To Migrate Ever Part Production data
  */
 // schedule.scheduleJob("30 15 12 * * *", function () {
-schedule.scheduleJob('*/15 * * * *', function () {
+schedule.scheduleJob('*/30 * * * *', function () {
     console.log('DATA MIGRATION SERVICE RUNNING');
     dataMigrationProcess();
 });
@@ -46,10 +46,10 @@ schedule.scheduleJob('*/15 * * * *', function () {
 /**
  * @author Urvesh Vernekar
  * @date 2024-04-24
- * @update
+ * @update 2024-04-24
  * @use To migrate ICT files
  */
-schedule.scheduleJob("35 16 15 * * *", function () {
-    console.log('PROCESSING EVER ICT DATA');
-    everICTDataProcess();
-});
+// schedule.scheduleJob("35 16 15 * * *", function () {
+//     console.log('PROCESSING EVER ICT DATA');
+//     everICTDataProcess();
+// });

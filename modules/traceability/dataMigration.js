@@ -3,7 +3,7 @@ const axios = require('axios');
 var pool = require("../connections/connectionLocal");
 
 /**
- * @author Urvesh
+ * @author Urvesh Vernekar
  * @param {MySQL query} query
  * @date 24-04-2024
  * @returns Part Details for migration
@@ -41,7 +41,7 @@ exports.init = async () => {
             entry.vendor_name = process.env.VENDOR_NAME;
         }
 
-        const chunkSize = 100;
+        const chunkSize = 200;
 
         // Split partDetails into chunks
         const chunks = [];
@@ -59,7 +59,7 @@ exports.init = async () => {
 
         // Update migration_status for processed records
         for (const record of partDetails) {
-            let query2 = "UPDATE `vendor`.`part_production` SET `migration_status` = '1' WHERE (`id` = '" + record.id + "');";
+            let query2 = "UPDATE `vendor`.`part_production` SET `migration_status` = 1 WHERE (`id` = '" + record.id + "');";
             await executeQuery1(query2);
         }
 
